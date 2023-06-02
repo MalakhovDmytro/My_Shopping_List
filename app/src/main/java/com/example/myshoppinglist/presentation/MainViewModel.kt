@@ -1,13 +1,11 @@
 package com.example.myshoppinglist.presentation
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.myshoppinglist.data.ShopListRepositoryImpl
 import com.example.myshoppinglist.domain.EditShopItemUseCase
 import com.example.myshoppinglist.domain.GetShopListUseCase
 import com.example.myshoppinglist.domain.RemoveShopItemUseCase
 import com.example.myshoppinglist.domain.ShopItem
-import com.example.myshoppinglist.domain.ShopListRepository
 
 class MainViewModel : ViewModel() {
 
