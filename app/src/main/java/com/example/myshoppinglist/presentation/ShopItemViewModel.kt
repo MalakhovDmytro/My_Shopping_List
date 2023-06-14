@@ -7,13 +7,13 @@ import com.example.myshoppinglist.data.ShopListRepositoryImpl
 import com.example.myshoppinglist.domain.AddShopItemUseCase
 import com.example.myshoppinglist.domain.EditShopItemUseCase
 import com.example.myshoppinglist.domain.GetShopItemUseCase
-import com.example.myshoppinglist.domain.GetShopListUseCase
 import com.example.myshoppinglist.domain.ShopItem
 import java.lang.Exception
 
 class ShopItemViewModel: ViewModel() {
 
     private val repository = ShopListRepositoryImpl
+
     private val getShopItemUseCase = GetShopItemUseCase(repository)
     private val addShopItemUseCase = AddShopItemUseCase(repository)
     private val editShopItemUseCase = EditShopItemUseCase(repository)
@@ -45,7 +45,7 @@ class ShopItemViewModel: ViewModel() {
         val fieldsValid = validateInput(name, count)
         if (fieldsValid) {
             val shopItem = ShopItem(name, count, true)
-            val item = addShopItemUseCase.addShopItem(shopItem)
+            addShopItemUseCase.addShopItem(shopItem)
             finishWork()
         }
     }

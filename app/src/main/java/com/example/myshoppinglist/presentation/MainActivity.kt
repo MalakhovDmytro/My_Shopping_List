@@ -29,6 +29,12 @@ class MainActivity : AppCompatActivity() {
             val intent = ShopItemActivity.newIntentAddItem(this)
             startActivity(intent)
         }
+        //test
+        val buttonAddItem1 = findViewById<FloatingActionButton>(R.id.button_add1)
+        buttonAddItem1.setOnClickListener {
+            val intent = MainActivity2.newIntentAddItem1(this)
+            startActivity(intent)
+        }
     }
 
     private fun setupRecyclerView() {
