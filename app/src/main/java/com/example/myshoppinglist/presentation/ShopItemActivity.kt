@@ -9,7 +9,7 @@ import com.example.myshoppinglist.R
 import com.example.myshoppinglist.domain.ShopItem
 import kotlin.RuntimeException
 
-class ShopItemActivity : AppCompatActivity() {
+class ShopItemActivity : AppCompatActivity(), ShopItemFragment.OnEditingFinishedListener {
 
     private var screenMode = MODE_UNKNOWN
     private var shopItemId = ShopItem.UNDEFINED_ID
@@ -23,6 +23,10 @@ class ShopItemActivity : AppCompatActivity() {
             launchRightMode()
         }
 
+    }
+
+    override fun onEditingFinished() {
+        finish()
     }
 
 
